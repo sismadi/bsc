@@ -3,6 +3,11 @@
 Aplikasi web (PWA-ready, mobile-first) untuk setor sampah, saldo, penukaran, lokasi TPS, edukasi dan notifikasi.
 Peran: **Pengguna (nasabah)**, **Petugas (admin TPS)**, **Pengepul**, **Admin (super admin)**.
 
+## Halaman
+- `/` = landing page publik (statis, tanpa login, tanpa JavaScript, responsif): `public/index.html` + `public/css/landing.css`.
+- `/masuk` = aplikasi (login, daftar, dan semua menu per peran): `public/masuk.html`.
+- Konten landing (angka, harga contoh, jadwal, kontak) ditulis langsung di `index.html`; ubah di sana bila data berubah.
+
 ## Arsitektur
 
 ```

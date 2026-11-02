@@ -19,6 +19,7 @@ export function authView(root, onDone) {
         <form>${formHtml(fields, {}, mode === 'login' ? 'Masuk' : 'Daftar')}</form>
         <p class="switch">${mode === 'login' ? 'Belum punya akun?' : 'Sudah punya akun?'}
           <button type="button" id="sw">${mode === 'login' ? 'Daftar' : 'Masuk'}</button></p>
+        <p class="switch"><a href="/">← Kembali ke beranda</a></p>
       </div></main>`;
     submitForm($('form', root), async (d) => {
       await api.post('/auth/' + mode, { ...d, captcha_token: cap.token });
