@@ -42,17 +42,17 @@ const pinHash = await hashPin(PIN);
 console.log([
   reset,
   ...USERS.map((u) => `INSERT INTO users(no_hp,nama,pin_hash,role,tps_id) VALUES('${u.hp}','${u.nama}','${pinHash}','${u.role}',${u.tps});`),
-  // Saldo akhir Pengguna Demo: (20.000 + 3.000) - (10.000 selesai + 10.000 menunggu) = Rp 3.000
-  setoran('DEMO-S1', 'PLS-BTL', 5, 4000, 'disetujui', true, '', 6),
+  // Saldo akhir Pengguna Demo: (24.000 + 3.000) - (10.000 selesai + 10.000 menunggu) = Rp 7.000
+  setoran('DEMO-S1', 'PLS-BTA', 8, 3000, 'disetujui', true, '', 6),
   setoran('DEMO-S2', 'KRT-KRN', 3, 1000, 'disetujui', true, '', 4),
-  setoran('DEMO-S3', 'KRT-KDS', 2, 1500, 'menunggu', false, '', 0),
-  setoran('DEMO-S4', 'PLS-GLS', 1, 2000, 'ditolak', true, 'Sampah belum dipilah', 2),
-  // Stok TPS 1 setelah demo: botol 5-2=3 kg, koran 3-1=2 kg (kardus 2 kg masih menunggu verifikasi)
-  jual('DEMO-J1', 'PLS-BTL', 2, 4500, 'diterima', 2),
+  setoran('DEMO-S3', 'KRT-DUS', 2, 1000, 'menunggu', false, '', 0),
+  setoran('DEMO-S4', 'PLS-GLA', 1, 2500, 'ditolak', true, 'Sampah belum dipilah', 2),
+  // Stok TPS 1 setelah demo: botol 8-2=6 kg, koran 3-1=2 kg (kardus 2 kg masih menunggu verifikasi)
+  jual('DEMO-J1', 'PLS-BTA', 2, 3500, 'diterima', 2),
   jual('DEMO-J2', 'KRT-KRN', 1, 1000, 'menunggu', 0),
   tukar('DEMO-T1', 10000, 'DANA', '08990000003', 'selesai', 3),
   tukar('DEMO-T2', 10000, 'GoPay', '08990000003', 'menunggu', 0),
-  notif('Setoran disetujui', 'DEMO-S1: 5 kg diterima, saldo bertambah Rp 20.000.', 6),
+  notif('Setoran disetujui', 'DEMO-S1: 8 kg diterima, saldo bertambah Rp 24.000.', 6),
   notif('Setoran ditolak', 'DEMO-S4 ditolak. Sampah belum dipilah', 2),
   notif('Penukaran berhasil', 'DEMO-T1: Rp 10.000 sudah dikirim.', 3),
 ].join('\n'));
