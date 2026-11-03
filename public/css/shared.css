@@ -1,0 +1,23 @@
+/* Komponen bersama landing (/) dan aplikasi (/masuk). Memakai token --g* dari masing-masing halaman. */
+
+/* logo: satu aturan untuk semua tempat; .on-dark memberi lencana putih di latar hijau */
+.logo{display:block;width:auto;height:44px;aspect-ratio:1}
+.logo.on-dark{background:#fff;border-radius:12px;padding:3px;height:42px}
+.logo.lg{height:64px}
+
+/* slider: berfungsi tanpa JavaScript (scroll-snap/geser); slider.js menambah tombol, titik, autoplay */
+.slider{position:relative;border-radius:var(--r,16px);overflow:hidden;background:var(--g900)}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.slides::-webkit-scrollbar{display:none}
+.slides:focus-visible{outline:3px solid var(--g500);outline-offset:-3px}
+.slide{position:relative;flex:0 0 100%;margin:0;scroll-snap-align:center}
+.slide img{display:block;width:100%;height:auto;aspect-ratio:5/2;object-fit:cover}
+.slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 14px;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.62))}
+.slide figcaption small{display:block;font-weight:400;opacity:.9}
+.s-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:var(--g900);font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+.s-btn:hover{background:#fff}.s-btn:focus-visible{outline:3px solid var(--g500)}
+.s-btn.prev{left:10px}.s-btn.next{right:10px}
+.s-dots{position:absolute;right:14px;top:12px;display:flex;gap:6px}
+.s-dots button{width:10px;height:10px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer}
+.s-dots button[aria-current="true"]{background:#fff;width:24px;border-radius:99px}
+@media (max-width:600px){.slide img{aspect-ratio:4/3}.s-btn{display:none}}

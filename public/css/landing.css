@@ -22,7 +22,6 @@ a{color:var(--g700)}
 .bar{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--g900);font-weight:800;font-size:1.15rem}
 .brand small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);line-height:1.1}
-.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--g700);color:#fff;font-size:1.3rem}
 .links{display:flex;align-items:center;gap:4px}
 .links a:not(.btn){padding:8px 12px;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:500}
 .links a:not(.btn):hover{background:var(--g100)}
@@ -104,3 +103,6 @@ address{font-style:normal;margin-bottom:1rem}
 .people span{color:var(--soft);font-size:.88rem;white-space:nowrap}
 .people li[hidden]{display:none}
 @media (max-width:520px){.log li{grid-template-columns:1fr;gap:2px}}
+
+/* slider di landing */
+.slider-sec{padding:clamp(20px,4vw,36px) 0 0}

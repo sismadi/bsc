@@ -1,3 +1,7 @@
+import { initSliders } from './slider.js';
+
+initSliders();
+
 // Pencarian nasabah di landing page (tanpa data pribadi: hanya nama dan RT).
 const q = document.getElementById('cari'), items = [...document.querySelectorAll('#daftar li')], kosong = document.getElementById('kosong');
 q?.addEventListener('input', () => {

@@ -38,7 +38,7 @@ const ICONS = {
 const KATEGORI_ICON = { kertas: 'paper', plastik: 'bottle', logam: 'can', kaca: 'glass', elektronik: 'chip', organik: 'leaf', tekstil: 'shirt', minyak: 'drop' };
 export const katIcon = (k) => icon(KATEGORI_ICON[String(k ?? '').trim().toLowerCase()] || 'box');
 export const icon = (n) => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n] || ''}</svg>`;
-export const logo = '<svg viewBox="0 0 40 40" aria-hidden="true"><rect x="9" y="14" width="22" height="22" rx="5" fill="#fff" stroke="#17715a" stroke-width="2.5"/><path d="M14 14v-3h12v3M20 11V6" stroke="#17715a" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M20 6c3-3 8-1 8 2-3 2-7 1-8-2z" fill="#2e9a78"/><path d="M15 24a5 5 0 0 1 9-3M25 24a5 5 0 0 1-9 3" stroke="#17715a" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>';
+export const logo = (cls = '') => `<img class="logo ${cls}" src="/img/logo.png" alt="" width="44" height="44">`;
 
 /* formHtml(fields, values, submitLabel): satu pembangun form untuk login, setor, tukar, CRUD master.
    field: {name,label,type:'text|number|select|textarea|file',options:[{value,label}],optional,...atribut input} */

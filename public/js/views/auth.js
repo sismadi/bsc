@@ -14,7 +14,7 @@ export function authView(root, onDone) {
     ];
     root.innerHTML = `
       <main class="auth"><div class="auth-card">
-        <div class="brand">${logo}<div>BSC<small>BANK SAMPAH CINTA RW 21</small></div></div>
+        <div class="brand">${logo('lg')}<div>BSC<small>BANK SAMPAH CINTA RW 21</small></div></div>
         <h2>${mode === 'login' ? 'Masuk' : 'Buat akun'}</h2>
         <form>${formHtml(fields, {}, mode === 'login' ? 'Masuk' : 'Daftar')}</form>
         <p class="switch">${mode === 'login' ? 'Belum punya akun?' : 'Sudah punya akun?'}
