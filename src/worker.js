@@ -13,9 +13,10 @@ import * as penjualan from './services/penjualan.js';
 import * as delegasi from './services/delegasi.js';
 import * as backup from './services/backup.js';
 import * as laporan from './services/laporan.js';
+import * as landing from './services/landing.js';
 
 const router = new Router();
-[auth, setoran, penukaran, dompet, master, penjualan, delegasi, backup, laporan].forEach((s) => s.register(router));
+[auth, setoran, penukaran, dompet, master, penjualan, delegasi, backup, laporan, landing].forEach((s) => s.register(router));
 
 const errorResponse = (e) => {
   if (e instanceof HttpError) return json({ error: e.message }, e.status);

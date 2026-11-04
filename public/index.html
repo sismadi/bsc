@@ -7,8 +7,6 @@
 <meta name="description" content="Bank Sampah CINTA (Ciangsana Indah Tertata) RW 21 Komplek TWP TNI AL, Gunung Putri, Bogor. Bersih lingkunganku, sejahtera keluargaku.">
 <title>Bank Sampah CINTA RW 21 – Ciangsana Indah Tertata</title>
 <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/shared.css">
 <link rel="stylesheet" href="/css/landing.css">
 </head>
 <body>
@@ -16,10 +14,11 @@
 
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="/" aria-label="BSC Bank Sampah CINTA"><img class="logo" src="/img/logo.png" alt="" width="44" height="44"><span>BSC<small>Bank Sampah CINTA</small></span></a>
+    <a class="brand" href="/" aria-label="BSC Bank Sampah CINTA"><img class="logo" src="/img/logo-bsc.png" alt="" width="40" height="40"><span>BSC<small>Bank Sampah CINTA</small></span></a>
     <input type="checkbox" id="menu" class="menu-toggle" aria-label="Buka menu">
     <label for="menu" class="burger" aria-hidden="true"><i></i><i></i><i></i></label>
     <nav class="links">
+      <a href="#galeri">Galeri</a>
       <a href="#tentang">Tentang</a>
       <a href="#dokumentasi">Dokumentasi</a>
       <a href="#catatan">Catatan</a>
@@ -35,31 +34,30 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Ciangsana Indah Tertata · RW 21 Komplek TWP TNI AL</p>
-        <h1>Bersih Lingkunganku,<br>Sejahtera Keluargaku</h1>
-        <p class="lead">Setor sampah terpilah, dapatkan saldo, dan nikmati lingkungan yang lebih bersih dan sehat bersama Bank Sampah CINTA, Gunung Putri, Kabupaten Bogor.</p>
+        <p class="eyebrow" data-set="hero_eyebrow">Ciangsana Indah Tertata · RW 21 Komplek TWP TNI AL</p>
+        <h1 data-set="hero_judul">Bersih Lingkunganku,<br>Sejahtera Keluargaku</h1>
+        <p class="lead" data-set="hero_lead">Setor sampah terpilah, dapatkan saldo, dan nikmati lingkungan yang lebih bersih dan sehat bersama Bank Sampah CINTA, Gunung Putri, Kabupaten Bogor.</p>
         <div class="cta">
           <a class="btn big" href="/masuk">Masuk ke aplikasi</a>
           <a class="btn big ghost" href="#cara">Pelajari caranya</a>
         </div>
       </div>
       <ul class="hero-card" aria-label="Ringkasan">
-        <li><b>2018</b><span>Berdiri 23 Desember 2018</span></li>
-        <li><b>14 RT</b><span>Seluruh wilayah RW 21</span></li>
-        <li><b>541</b><span>Nasabah (per September 2024)</span></li>
-        <li><b>7.931 kg</b><span>Sampah tertimbang sepanjang 2025</span></li>
+        <li><b data-set="stat_1_angka">2018</b><span data-set="stat_1_label">Berdiri 23 Desember 2018</span></li>
+        <li><b data-set="stat_2_angka">14 RT</b><span data-set="stat_2_label">Seluruh wilayah RW 21</span></li>
+        <li><b data-set="stat_3_angka">541</b><span data-set="stat_3_label">Nasabah (per September 2024)</span></li>
+        <li><b data-set="stat_4_angka">7.931 kg</b><span data-set="stat_4_label">Sampah tertimbang sepanjang 2025</span></li>
       </ul>
     </div>
   </section>
 
-  <section id="galeri" class="sec slider-sec" aria-label="Galeri kegiatan">
+  <section id="galeri" class="gallery" aria-label="Galeri kegiatan">
     <div class="wrap">
-      <div class="slider" data-slider data-interval="5000">
-        <div class="slides" tabindex="0">
-          <figure class="slide"><img src="/img/slides/slide-1.webp" alt="Penimbangan sampah Bank Sampah CINTA" width="1600" height="640"><figcaption>Penimbangan sampah rutin<small>Setiap bulan, minggu ke-2</small></figcaption></figure>
-          <figure class="slide"><img src="/img/slides/slide-2.webp" alt="Edukasi pilah sampah" width="1600" height="640" loading="lazy"><figcaption>Edukasi pilah sampah<small>Ke RT, PKK, sekolah, dan perumahan lain</small></figcaption></figure>
-          <figure class="slide"><img src="/img/slides/slide-3.webp" alt="Tukar minyak jelantah" width="1600" height="640" loading="lazy"><figcaption>Tukar minyak jelantah<small>Menjadi migor, sirup, dan sarden</small></figcaption></figure>
-        </div>
+      <div class="slider" id="slider" role="region" aria-roledescription="carousel" aria-label="Foto kegiatan">
+        <div class="slides" id="slides" tabindex="0"><figure class="slide"><img src="/img/slide-1.jpg" alt="Penghargaan Kampung Ramah Lingkungan Kabupaten Bogor"><figcaption>Penghargaan Kampung Ramah Lingkungan Kabupaten Bogor</figcaption></figure><figure class="slide"><img src="/img/slide-2.jpg" alt="Pengurus CINTA dengan kostum daur ulang" loading="lazy"><figcaption>Pengurus CINTA dengan kostum daur ulang</figcaption></figure><figure class="slide"><img src="/img/slide-3.jpg" alt="Pencatatan dan penimbangan di basecamp CINTA" loading="lazy"><figcaption>Pencatatan dan penimbangan di basecamp CINTA</figcaption></figure><figure class="slide"><img src="/img/slide-4.jpg" alt="Kunjungan penilaian lingkungan di RW 21" loading="lazy"><figcaption>Kunjungan penilaian lingkungan di RW 21</figcaption></figure><figure class="slide"><img src="/img/slide-5.jpg" alt="Etalase produk daur ulang dan piala penghargaan" loading="lazy"><figcaption>Etalase produk daur ulang dan piala penghargaan</figcaption></figure><figure class="slide"><img src="/img/slide-6.jpg" alt="Potong rambut gratis tukar sampah kering (Ramadhan 2022)" loading="lazy"><figcaption>Potong rambut gratis tukar sampah kering (Ramadhan 2022)</figcaption></figure></div>
+        <button class="sl-btn prev" type="button" id="sl-prev" aria-label="Foto sebelumnya">‹</button>
+        <button class="sl-btn next" type="button" id="sl-next" aria-label="Foto berikutnya">›</button>
+        <div class="dots" id="sl-dots"></div>
       </div>
     </div>
   </section>
@@ -67,15 +65,15 @@
   <section id="tentang" class="sec">
     <div class="wrap two">
       <div>
-        <h2>Tentang Bank Sampah CINTA</h2>
-        <p>Bank Sampah CINTA (Ciangsana Indah Tertata) lahir dari keresahan warga atas lingkungan yang kurang terawat. Bank sampah ini tidak hanya menghimpun sampah, tetapi juga menghargainya sesuai harga yang telah ditentukan, sehingga warga menabung sambil menjaga kebersihan.</p>
-        <p>Dikelola oleh pengurus periode 2023–2028 dan berkantor di lahan fasilitas umum Komplek TWP TNI AL Graha Jala Yudha, CINTA juga membina bank sampah lain, mendampingi sekolah, dan bermitra dengan sejumlah perguruan tinggi.</p>
+        <h2 data-set="tentang_judul">Tentang Bank Sampah CINTA</h2>
+        <div data-paras="tentang_isi"><p>Bank Sampah CINTA (Ciangsana Indah Tertata) lahir dari keresahan warga atas lingkungan yang kurang terawat. Bank sampah ini tidak hanya menghimpun sampah, tetapi juga menghargainya sesuai harga yang telah ditentukan, sehingga warga menabung sambil menjaga kebersihan.</p>
+        <p>Dikelola oleh pengurus periode 2023–2028 dan berkantor di lahan fasilitas umum Komplek TWP TNI AL Graha Jala Yudha, CINTA juga membina bank sampah lain, mendampingi sekolah, dan bermitra dengan sejumlah perguruan tinggi.</p></div>
       </div>
       <div class="card">
         <h3>Visi</h3>
-        <p>“Lingkunganku bersih dan sejahtera, hidup semakin sehat.”</p>
+        <p data-set="visi">“Lingkunganku bersih dan sejahtera, hidup semakin sehat.”</p>
         <h3>Misi</h3>
-        <ul class="tick">
+        <ul class="tick" data-list="misi">
           <li>Melestarikan lingkungan</li>
           <li>Membudayakan hidup bersih, sejahtera, dan sehat</li>
           <li>Membudayakan tidak membuang sampah sembarangan</li>
@@ -89,8 +87,8 @@
     <div class="wrap two">
       <div>
         <h2>Dokumentasi kegiatan</h2>
-        <p>Foto dan rekaman kegiatan Bank Sampah CINTA sepanjang 2025: penimbangan, edukasi pilah sampah, kunjungan, dan perayaan hari jadi.</p>
-        <p><a class="btn big" id="link-dokumentasi" href="#catatan">Lihat dokumentasi</a></p>
+        <p data-set="dokumentasi_isi">Foto dan rekaman kegiatan Bank Sampah CINTA sepanjang 2025: penimbangan, edukasi pilah sampah, kunjungan, dan perayaan hari jadi.</p>
+        <p><a class="btn big" id="link-dokumentasi" data-href="link_dokumentasi" href="#catatan">Lihat dokumentasi</a></p>
       </div>
       <div class="card"><h3>Kegiatan rutin</h3><ul class="tick"><li>Penimbangan sampah tiap bulan</li><li>Edukasi pilah sampah ke RT, PKK, sekolah, dan perumahan lain</li><li>Pembinaan bank sampah baru</li></ul></div>
     </div>
@@ -99,8 +97,8 @@
   <section id="catatan" class="sec">
     <div class="wrap">
       <h2>Catatan kegiatan</h2>
-      <p class="sub">79 kegiatan tercatat pada 2025, dari yang terbaru.</p>
-      <ol class="log">
+      <p class="sub" id="log-sub">79 kegiatan tercatat pada 2025, dari yang terbaru.</p>
+      <ol class="log" id="log">
 <li><time>28 Desember 2025</time><div><b>Tukar Minyak Jelantah ( 104 L) menjadi Migor, Syrup &amp; Sarden ) dalam rangka Peresmian Kantor Balai RW 21 &amp; Hari Jadi BC CINTA Ke - 7</b><span>Kantor Balia RW 21</span></div></li>
 <li><time>23 Desember 2025</time><div><b>Penimbangan Sampah &amp; Perayaan Hari Jadi BC CINTA Ke - 7</b><span>BC CINTA</span></div></li>
 <li><time>20 Desember 2025</time><div><b>Penimbangan Sampah</b><span>Taman Paris, KotWis</span></div></li>
@@ -285,7 +283,7 @@
     <div class="wrap two">
       <div>
         <h2>Jadwal penimbangan</h2>
-        <p>Penimbangan rutin dilaksanakan sekali dalam sebulan, pada minggu ke-2.</p>
+        <p data-set="jadwal_ket">Penimbangan rutin dilaksanakan sekali dalam sebulan, pada minggu ke-2.</p>
         <ul class="time">
           <li><b>08.00 – 10.00</b><span>Penimbangan</span></li>
           <li><b>10.00 – 12.00</b><span>Pemilahan</span></li>
@@ -294,7 +292,7 @@
       </div>
       <div class="card">
         <h3>Tips menyetor</h3>
-        <ul class="tick">
+        <ul class="tick" data-list="tips">
           <li>Bilas botol dan gelas plastik, buang label, pisahkan tutupnya.</li>
           <li>Simpan kertas di tempat kering agar tidak dihargai rendah.</li>
           <li>Kumpulkan minyak jelantah dalam botol tertutup.</li>
@@ -306,12 +304,12 @@
   <section id="prestasi" class="sec alt">
     <div class="wrap">
       <h2>Prestasi dan mitra</h2>
-      <div class="grid3">
+      <div class="grid3" id="prestasi-list">
         <article class="card"><b>2024</b><p>Kampung Ramah Lingkungan Terbaik 2 Tingkat Jawara, Kabupaten Bogor.</p></article>
         <article class="card"><b>2023</b><p>Kampung Ramah Lingkungan Terbaik 2 Tingkat Utama, Kabupaten Bogor.</p></article>
         <article class="card"><b>2024</b><p>Kostum Terbaik (daur ulang) pada FORSEPSI Leadership Summit tingkat nasional.</p></article>
       </div>
-      <p class="partners">Bermitra dengan Universitas IPWIJA, Universitas Trisakti, IPB Bogor, Universitas Pertahanan RI, UIN Syarif Hidayatullah Jakarta, ASOBSI, dan FORSEPSI (PT Pegadaian).</p>
+      <p class="partners" data-set="mitra">Bermitra dengan Universitas IPWIJA, Universitas Trisakti, IPB Bogor, Universitas Pertahanan RI, UIN Syarif Hidayatullah Jakarta, ASOBSI, dan FORSEPSI (PT Pegadaian).</p>
     </div>
   </section>
 
@@ -320,13 +318,13 @@
       <div>
         <h2>Kontak dan lokasi</h2>
         <address>
-          <b>Bank Sampah CINTA RW 21</b><br>
-          Blok AB 6 No 22A, RT 11/RW 21<br>
+          <b data-set="kontak_nama">Bank Sampah CINTA RW 21</b><br>
+          <span data-lines="kontak_alamat">Blok AB 6 No 22A, RT 11/RW 21<br>
           Komplek TWP TNI AL Ciangsana<br>
-          Kecamatan Gunung Putri, Kabupaten Bogor<br>
-          Telp/WA: <a href="tel:081382845578">0813 8284 5578</a>
+          Kecamatan Gunung Putri, Kabupaten Bogor</span><br>
+          Telp/WA: <a data-tel="kontak_telp" href="tel:081382845578">0813 8284 5578</a>
         </address>
-        <p><a class="btn ghost" href="https://wa.me/6281382845578">Hubungi lewat WhatsApp</a></p>
+        <p><a class="btn ghost" data-wa="kontak_wa" href="https://wa.me/6281382845578">Hubungi lewat WhatsApp</a></p>
       </div>
       <div class="card cta-card">
         <h3>Sudah jadi nasabah?</h3>
@@ -338,8 +336,8 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap">© 2026 Bank Sampah CINTA RW 21 Ciangsana · <a href="/masuk">Masuk</a></div>
+  <div class="wrap"><span data-set="footer">© 2026 Bank Sampah CINTA RW 21 Ciangsana</span> · <a href="/masuk">Masuk</a> · <a href="/admin">Admin</a></div>
 </footer>
-<script type="module" src="/js/landing.js"></script>
+<script src="/js/landing.js" defer></script>
 </body>
 </html>

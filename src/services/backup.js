@@ -9,7 +9,7 @@ import { verifyPin } from '../lib/crypto.js';
 import { SUP } from '../lib/roles.js';
 
 // Urutan induk -> anak (insert maju, delete mundur) agar foreign key terpenuhi.
-const TABLES = ['tps', 'users', 'jenis_sampah', 'edukasi', 'setoran', 'penukaran', 'penjualan', 'delegasi', 'notifikasi'];
+const TABLES = ['tps', 'users', 'jenis_sampah', 'edukasi', 'setoran', 'penukaran', 'penjualan', 'delegasi', 'notifikasi', 'landing_setting', 'landing_konten'];
 const FORMAT = { app: 'bsc', version: 1 };
 const MAX_PARAMS = 90;          // batas parameter per statement D1 = 100
 const MAX_CHUNK_BYTES = 400_000; // batas ukuran parameter per statement (foto base64 besar)

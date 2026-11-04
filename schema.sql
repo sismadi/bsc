@@ -113,3 +113,25 @@ CREATE INDEX IF NOT EXISTS idx_jual_tps ON penjualan(tps_id, jenis_id, status);
 CREATE INDEX IF NOT EXISTS idx_jual_pgp ON penjualan(pengepul_id, status);
 CREATE INDEX IF NOT EXISTS idx_delegasi_user ON delegasi(user_id);
 CREATE INDEX IF NOT EXISTS idx_users_role ON users(role);
+
+-- ===== Konten landing page (dikelola lewat /admin) =====
+CREATE TABLE IF NOT EXISTS landing_setting (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kunci TEXT NOT NULL UNIQUE,
+  nilai TEXT NOT NULL DEFAULT '',
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS landing_konten (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  bagian TEXT NOT NULL CHECK (bagian IN ('slider','kegiatan','prestasi','nasabah')),
+  urutan INTEGER NOT NULL DEFAULT 0,
+  judul TEXT NOT NULL,
+  isi TEXT NOT NULL DEFAULT '',
+  tanggal TEXT,                 -- kegiatan: YYYY-MM-DD, prestasi: tahun
+  tautan TEXT,
+  gambar TEXT,                  -- URL gambar statis (/img/...) atau https
+  gambar_data TEXT,             -- data URL terkompres hasil unggah dari /admin (<=~400KB)
+  tampil INTEGER NOT NULL DEFAULT 1 CHECK (tampil IN (0,1)),
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_landing_konten ON landing_konten(bagian, tampil, urutan);

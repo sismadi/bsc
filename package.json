@@ -8,6 +8,7 @@
     "deploy": "wrangler deploy",
     "db:schema": "wrangler d1 execute bsc --remote --file=schema.sql",
     "db:seed": "wrangler d1 execute bsc --remote --file=seed.sql",
+    "db:landing": "wrangler d1 execute bsc --remote --file=landing.sql",
     "demo": "node scripts/make-demo.mjs > demo.sql && wrangler d1 execute bsc --remote --file=demo.sql",
     "demo:clean": "node scripts/make-demo.mjs clean > clean.sql && wrangler d1 execute bsc --remote --file=clean.sql",
     "db:local": "wrangler d1 execute bsc --local --file=schema.sql && wrangler d1 execute bsc --local --file=seed.sql"

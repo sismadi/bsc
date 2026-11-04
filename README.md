@@ -8,6 +8,14 @@ Peran: **Pengguna (nasabah)**, **Petugas (admin TPS)**, **Pengepul**, **Admin (s
 - `/masuk` = aplikasi (login, daftar, dan semua menu per peran): `public/masuk.html`.
 - Konten landing (angka, harga contoh, jadwal, kontak) ditulis langsung di `index.html`; ubah di sana bila data berubah.
 
+## Admin landing page (`/admin`)
+- `public/admin.html` + `js/admin.js` + `css/admin.css`. Hanya akun **Admin** (super_admin); login dulu lewat `/masuk`.
+- Data di D1: `landing_setting` (teks, angka, kontak, link dokumentasi) dan `landing_konten` (bagian `slider`, `kegiatan`, `prestasi`, `nasabah`).
+- API: publik `GET /api/publik/landing`, `GET /api/publik/gambar/:id` (cache 60 dtk); admin `GET /api/landing/admin`, `PUT /api/landing/setting`, `POST|PUT|DELETE /api/landing/konten[/:id]`, `POST /api/landing/konten/bulk|urut`. Kode: `src/services/landing.js`.
+- Foto slider yang diunggah dikecilkan di browser (maks 1280 px) lalu disimpan sebagai data URL di D1 (maks ±300 KB/foto). Gambar dari situs lain tidak dipakai karena CSP (`img-src 'self'`); pakai unggahan atau path situs (`/img/...`).
+- Pasang: `npm run db:schema` (tabel baru ikut) lalu `npm run db:landing` (isi awal; aman diulang, tidak menimpa hasil edit). Landing memuat isi statis sebagai cadangan bila API gagal.
+- Backup/restore ikut memuat kedua tabel landing. Memulihkan backup lama (sebelum fitur ini) akan mengosongkan konten landing.
+
 ## Arsitektur
 
 ```

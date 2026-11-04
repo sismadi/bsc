@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f4d3a">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin Landing – BSC Bank Sampah CINTA</title>
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="/admin"><img src="/img/logo-bsc.png" alt="" width="36" height="36"><span>Admin Landing<small>BSC · Bank Sampah CINTA</small></span></a>
+    <nav class="bar-links" aria-label="Pintasan">
+      <a href="/" target="_blank" rel="noopener">Lihat landing ↗</a>
+      <a href="/masuk">Aplikasi</a>
+      <button type="button" id="logout" hidden>Keluar</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="root">
+  <p class="muted" id="loading">Memuat…</p>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <form id="dlg-form" novalidate>
+    <h2 id="dlg-title"></h2>
+    <div id="dlg-body"></div>
+    <p class="err" id="dlg-err" role="alert" hidden></p>
+    <div class="dlg-actions">
+      <button type="button" class="btn ghost" id="dlg-cancel">Batal</button>
+      <button type="submit" class="btn" id="dlg-ok">Simpan</button>
+    </div>
+  </form>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="/js/admin.js"></script>
+</body>
+</html>

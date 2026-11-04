@@ -22,6 +22,7 @@ a{color:var(--g700)}
 .bar{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--g900);font-weight:800;font-size:1.15rem}
 .brand small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);line-height:1.1}
+.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--g700);color:#fff;font-size:1.3rem}
 .links{display:flex;align-items:center;gap:4px}
 .links a:not(.btn){padding:8px 12px;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:500}
 .links a:not(.btn):hover{background:var(--g100)}
@@ -104,5 +105,23 @@ address{font-style:normal;margin-bottom:1rem}
 .people li[hidden]{display:none}
 @media (max-width:520px){.log li{grid-template-columns:1fr;gap:2px}}
 
-/* slider di landing */
-.slider-sec{padding:clamp(20px,4vw,36px) 0 0}
+/* logo */
+.logo{width:40px;height:40px;object-fit:contain;flex:none}
+
+/* galeri / slider */
+.gallery{padding:clamp(20px,4vw,40px) 0 0}
+.slider{position:relative;border-radius:var(--r);overflow:hidden;background:var(--g900);box-shadow:0 10px 30px rgba(15,77,58,.18)}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.slides::-webkit-scrollbar{display:none}
+.slides:focus-visible{outline:3px solid var(--g500);outline-offset:-3px}
+.slide{position:relative;flex:0 0 100%;margin:0;scroll-snap-align:start;aspect-ratio:16/8}
+.slide img{display:block;width:100%;height:100%;object-fit:cover}
+.slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 20px 16px;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:var(--g900);font-size:1.7rem;line-height:1;cursor:pointer}
+.sl-btn:hover{background:#fff}.sl-btn.prev{left:12px}.sl-btn.next{right:12px}
+.sl-btn[hidden],.dots[hidden]{display:none}
+.dots{position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:8px}
+.dots button{width:10px;height:10px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.55);cursor:pointer}
+.dots button[aria-current="true"]{background:#fff;width:24px;border-radius:6px}
+@media (max-width:640px){.slide{aspect-ratio:4/3}.slide figcaption{padding:28px 14px 22px;font-size:.92rem}.sl-btn{width:38px;height:38px}}
+[hidden]{display:none!important}

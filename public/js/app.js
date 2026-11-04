@@ -42,7 +42,7 @@ let ctx = null;
 function shell() {
   const allowed = ROUTES.filter((r) => r.roles.includes(ctx.user.role));
   root.innerHTML = `<div class="shell">
-    <header class="topbar"><div class="brand">${logo('on-dark')}<span>BSC</span></div>
+    <header class="topbar"><div class="brand">${logo}<span>BSC</span></div>
       <div class="tools"><span class="who">${esc(ctx.user.nama)} · ${ROLE_LABEL[ctx.user.role]}</span>
         <a class="iconbtn" href="#/notif" aria-label="Notifikasi">${icon('bell')}</a>${ctx.user.role === 'nasabah' ? `<a class="iconbtn" href="#/edukasi" aria-label="Edukasi">${icon('book')}</a>` : ''}
         <button class="iconbtn" id="logout" aria-label="Keluar">${icon('out')}</button></div></header>
